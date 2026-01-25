@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8"/>
+    </marker>
+    <linearGradient id="boxGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff"/>
+      <stop offset="100%" style="stop-color:#ffffff"/>
+    </linearGradient>
+    <linearGradient id="actionGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#ffffff"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="300" fill="#ffffff"/>
+  
+  <!-- Step 1: Sensor -->
+  <g transform="translate(60, 90)">
+    <rect width="200" height="120" rx="12" fill="url(#boxGradient)" filter="url(#boxShadow)" stroke="#0284c7" stroke-width="2"/>
+    
+    <!-- Camera Icon -->
+    <g transform="translate(55, 20)" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+      <circle cx="12" cy="13" r="4"/>
+    </g>
+    
+    <!-- Mic Icon -->
+    <g transform="translate(105, 20)" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+      <line x1="12" y1="19" x2="12" y2="23"/>
+      <line x1="8" y1="23" x2="16" y2="23"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="100" y="75" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0f172a">SENSOR</text>
+    <text x="100" y="95" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="12" fill="#64748b">Camera + Mic</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="270" y1="150" x2="330" y2="150" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: AI Analysis -->
+  <g transform="translate(340, 90)">
+    <rect width="200" height="120" rx="12" fill="url(#boxGradient)" filter="url(#boxShadow)" stroke="#0284c7" stroke-width="2"/>
+    
+    <!-- Brain/Neural Network Icon -->
+    <g transform="translate(70, 15)">
+      <!-- Neural nodes -->
+      <circle cx="30" cy="20" r="6" fill="#0284c7"/>
+      <circle cx="10" cy="10" r="5" fill="#38bdf8"/>
+      <circle cx="50" cy="10" r="5" fill="#38bdf8"/>
+      <circle cx="10" cy="35" r="5" fill="#38bdf8"/>
+      <circle cx="50" cy="35" r="5" fill="#38bdf8"/>
+      <circle cx="30" cy="45" r="4" fill="#0284c7" opacity="0.7"/>
+      
+      <!-- Connections -->
+      <line x1="15" y1="12" x2="25" y2="18" stroke="#0284c7" stroke-width="1.5"/>
+      <line x1="45" y1="12" x2="35" y2="18" stroke="#0284c7" stroke-width="1.5"/>
+      <line x1="15" y1="33" x2="25" y2="25" stroke="#0284c7" stroke-width="1.5"/>
+      <line x1="45" y1="33" x2="35" y2="25" stroke="#0284c7" stroke-width="1.5"/>
+      <line x1="30" y1="26" x2="30" y2="41" stroke="#38bdf8" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="100" y="75" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0f172a">AI ANALYSIS</text>
+    <text x="100" y="95" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="12" fill="#64748b">Species ID</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="550" y1="150" x2="610" y2="150" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Alert Decision -->
+  <g transform="translate(620, 90)">
+    <rect width="200" height="120" rx="12" fill="url(#boxGradient)" filter="url(#boxShadow)" stroke="#0284c7" stroke-width="2"/>
+    
+    <!-- Decision Diamond with Check -->
+    <g transform="translate(75, 12)">
+      <polygon points="25,0 50,25 25,50 0,25" fill="none" stroke="#0284c7" stroke-width="2"/>
+      <polyline points="15,25 22,32 35,18" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="100" y="75" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0f172a">ALERT DECISION</text>
+    <text x="100" y="95" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="12" fill="#64748b">Threat Level</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="830" y1="150" x2="890" y2="150" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 4: Action -->
+  <g transform="translate(900, 90)">
+    <rect width="200" height="120" rx="12" fill="url(#actionGradient)" filter="url(#boxShadow)" stroke="#0284c7" stroke-width="2"/>
+    
+    <!-- Light Bulb Icon -->
+    <g transform="translate(50, 15)" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18h6"/>
+      <path d="M10 22h4"/>
+      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+    </g>
+    
+    <!-- Divider -->
+    <line x1="100" y1="15" x2="100" y2="55" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Phone Icon -->
+    <g transform="translate(115, 15)" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="32" rx="3"/>
+      <line x1="12" y1="28" x2="12" y2="28"/>
+      <!-- Notification dot -->
+      <circle cx="18" cy="8" r="4" fill="#38bdf8"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="100" y="75" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0f172a">ACTION</text>
+    <text x="100" y="95" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="12" fill="#64748b">Light / SMS</text>
+  </g>
+  
+  <!-- Flow Label -->
+  <text x="600" y="260" text-anchor="middle" font-family="Inter, SF Pro Display, -apple-system, sans-serif" font-size="14" fill="#94a3b8">AgriShield AI Detection Pipeline</text>
+</svg>

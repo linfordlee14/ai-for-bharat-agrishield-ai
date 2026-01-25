@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <defs>
+    <filter id="tierShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0284c7"/>
+    </marker>
+    <marker id="arrowUp" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#38bdf8"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-family="Inter, SF Pro Display, sans-serif" font-size="24" font-weight="700" fill="#0f172a">AgriShield AI Architecture</text>
+</svg>
+
+  <!-- TIER 1: Edge Device -->
+  <g transform="translate(360, 70)">
+    <rect width="280" height="140" rx="16" fill="#ffffff" filter="url(#tierShadow)" stroke="#0284c7" stroke-width="2"/>
+    
+    <!-- Tier Label -->
+    <rect x="0" y="0" width="280" height="32" rx="16" fill="#0284c7"/>
+    <rect x="0" y="16" width="280" height="16" fill="#0284c7"/>
+    <text x="140" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ffffff">EDGE DEVICE</text>
+    
+    <!-- Raspberry Pi Icon -->
+    <g transform="translate(100, 50)">
+      <rect x="0" y="0" width="80" height="50" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <!-- GPIO pins -->
+      <rect x="10" y="-5" width="4" height="8" fill="#0284c7"/>
+      <rect x="20" y="-5" width="4" height="8" fill="#0284c7"/>
+      <rect x="30" y="-5" width="4" height="8" fill="#0284c7"/>
+      <rect x="46" y="-5" width="4" height="8" fill="#38bdf8"/>
+      <rect x="56" y="-5" width="4" height="8" fill="#38bdf8"/>
+      <rect x="66" y="-5" width="4" height="8" fill="#38bdf8"/>
+      <!-- Chip -->
+      <rect x="25" y="15" width="30" height="25" rx="2" fill="#0284c7"/>
+      <text x="40" y="32" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">Pi</text>
+    </g>
+    
+    <!-- Peripheral Icons -->
+    <g transform="translate(40, 105)">
+      <!-- Camera -->
+      <g transform="translate(0, 0)">
+        <rect width="50" height="24" rx="4" fill="#f0f9ff" stroke="#0284c7" stroke-width="1"/>
+        <circle cx="25" cy="12" r="6" fill="none" stroke="#0284c7" stroke-width="1.5"/>
+        <circle cx="25" cy="12" r="2" fill="#0284c7"/>
+        <text x="25" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#64748b">Camera</text>
+      </g>
+      <!-- Mic -->
+      <g transform="translate(70, 0)">
+        <rect width="50" height="24" rx="4" fill="#f0f9ff" stroke="#38bdf8" stroke-width="1"/>
+        <ellipse cx="25" cy="10" rx="6" ry="8" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+        <line x1="25" y1="18" x2="25" y2="22" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="25" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#64748b">Mic</text>
+      </g>
+      <!-- Light/Speaker -->
+      <g transform="translate(140, 0)">
+        <rect width="50" height="24" rx="4" fill="#f0f9ff" stroke="#0284c7" stroke-width="1"/>
+        <circle cx="25" cy="12" r="7" fill="none" stroke="#0284c7" stroke-width="1.5"/>
+        <line x1="25" y1="2" x2="25" y2="-2" stroke="#38bdf8" stroke-width="1.5"/>
+        <line x1="32" y1="5" x2="36" y2="2" stroke="#38bdf8" stroke-width="1.5"/>
+        <line x1="18" y1="5" x2="14" y2="2" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="25" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#64748b">Deterrent</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow: Edge to Cloud -->
+  <g transform="translate(500, 210)">
+    <line x1="0" y1="0" x2="0" y2="50" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="15" y="30" font-family="Inter, sans-serif" font-size="11" fill="#64748b">MQTT</text>
+  </g>
+  
+  <!-- TIER 2: AWS Cloud -->
+  <g transform="translate(200, 270)">
+    <rect width="600" height="180" rx="16" fill="#ffffff" filter="url(#tierShadow)" stroke="#f97316" stroke-width="2"/>
+    
+    <!-- Tier Label with AWS orange -->
+    <rect x="0" y="0" width="600" height="32" rx="16" fill="#f97316"/>
+    <rect x="0" y="16" width="600" height="16" fill="#f97316"/>
+    <text x="300" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ffffff">☁️ AWS CLOUD</text>
+    
+    <!-- AWS IoT Core -->
+    <g transform="translate(50, 55)">
+      <rect width="140" height="90" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+      <!-- IoT Icon -->
+      <g transform="translate(50, 15)">
+        <circle cx="20" cy="20" r="12" fill="none" stroke="#f97316" stroke-width="2"/>
+        <circle cx="20" cy="20" r="4" fill="#f97316"/>
+        <line x1="20" y1="8" x2="20" y2="2" stroke="#f97316" stroke-width="2"/>
+        <line x1="32" y1="20" x2="38" y2="20" stroke="#f97316" stroke-width="2"/>
+        <line x1="8" y1="20" x2="2" y2="20" stroke="#f97316" stroke-width="2"/>
+      </g>
+      <text x="70" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">IoT Core</text>
+      <text x="70" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#64748b">Message Broker</text>
+    </g>
+    
+    <!-- Arrow IoT to Lambda -->
+    <line x1="200" y1="100" x2="240" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- AWS Lambda -->
+    <g transform="translate(250, 55)">
+      <rect width="140" height="90" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+      <!-- Lambda Icon -->
+      <g transform="translate(50, 12)">
+        <text x="20" y="35" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="400" fill="#f97316">λ</text>
+      </g>
+      <text x="70" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">Lambda</text>
+      <text x="70" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#64748b">AI Processing</text>
+    </g>
+    
+    <!-- Arrow Lambda to SNS -->
+    <line x1="400" y1="100" x2="440" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Amazon SNS -->
+    <g transform="translate(450, 55)">
+      <rect width="140" height="90" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+      <!-- SNS Bell Icon -->
+      <g transform="translate(50, 15)">
+        <path d="M20 5 C12 5 6 12 6 20 L6 28 L34 28 L34 20 C34 12 28 5 20 5" fill="none" stroke="#f97316" stroke-width="2"/>
+        <circle cx="20" cy="32" r="4" fill="#f97316"/>
+        <line x1="20" y1="0" x2="20" y2="5" stroke="#f97316" stroke-width="2"/>
+      </g>
+      <text x="70" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">SNS</text>
+      <text x="70" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#64748b">Notifications</text>
+    </g>
+  </g>
+
+  <!-- Arrow: Cloud to Storage (bidirectional) -->
+  <g transform="translate(500, 450)">
+    <line x1="0" y1="0" x2="0" y2="50" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="-8" y1="50" x2="-8" y2="0" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowUp)"/>
+    <text x="15" y="30" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Data Flow</text>
+  </g>
+  
+  <!-- Dashed return arrow: Cloud to Edge -->
+  <g transform="translate(440, 270)">
+    <line x1="0" y1="0" x2="0" y2="-50" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowUp)"/>
+    <text x="-50" y="-25" font-family="Inter, sans-serif" font-size="10" fill="#38bdf8">Commands</text>
+  </g>
+  
+  <!-- TIER 3: Storage & Analytics -->
+  <g transform="translate(200, 510)">
+    <rect width="600" height="160" rx="16" fill="#ffffff" filter="url(#tierShadow)" stroke="#22c55e" stroke-width="2"/>
+    
+    <!-- Tier Label with green -->
+    <rect x="0" y="0" width="600" height="32" rx="16" fill="#22c55e"/>
+    <rect x="0" y="16" width="600" height="16" fill="#22c55e"/>
+    <text x="300" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ffffff">💾 STORAGE &amp; ANALYTICS</text>
+    
+    <!-- DynamoDB -->
+    <g transform="translate(50, 50)">
+      <rect width="140" height="85" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+      <!-- Database Icon -->
+      <g transform="translate(50, 10)">
+        <ellipse cx="20" cy="8" rx="18" ry="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M2 8 L2 32 C2 40 38 40 38 32 L38 8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.5"/>
+      </g>
+      <text x="70" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">DynamoDB</text>
+      <text x="70" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#64748b">Incident Data</text>
+    </g>
+    
+    <!-- S3 -->
+    <g transform="translate(230, 50)">
+      <rect width="140" height="85" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+      <!-- Bucket Icon -->
+      <g transform="translate(50, 10)">
+        <path d="M5 10 L5 35 C5 40 35 40 35 35 L35 10 C35 5 5 5 5 10" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <ellipse cx="20" cy="10" rx="15" ry="5" fill="none" stroke="#22c55e" stroke-width="2"/>
+      </g>
+      <text x="70" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">S3</text>
+      <text x="70" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#64748b">Media Storage</text>
+    </g>
+    
+    <!-- Bedrock -->
+    <g transform="translate(410, 50)">
+      <rect width="140" height="85" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+      <!-- AI Brain Icon -->
+      <g transform="translate(45, 8)">
+        <circle cx="25" cy="18" r="14" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M18 12 Q25 8 32 12" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+        <path d="M18 18 Q25 22 32 18" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+        <path d="M18 24 Q25 20 32 24" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+        <circle cx="15" cy="18" r="2" fill="#22c55e"/>
+        <circle cx="35" cy="18" r="2" fill="#22c55e"/>
+      </g>
+      <text x="70" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">Bedrock</text>
+      <text x="70" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#64748b">AI/ML Models</text>
+    </g>
+  </g>
+</svg>
