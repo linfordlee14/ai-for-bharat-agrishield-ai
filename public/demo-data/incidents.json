@@ -1,0 +1,59 @@
+{
+  "incidents": [
+    {
+      "incident_id": "inc_20260303_001",
+      "device_id": "agrishield-device-assam-001",
+      "timestamp": 1772553600000,
+      "species": "elephant",
+      "confidence": 0.94,
+      "threat_level": "HIGH",
+      "location": { "lat": 26.6528, "lng": 92.8120, "name": "Kaziranga North Perimeter" },
+      "image_url": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=800&q=80",
+      "deterrence_action": { "sound_played": true, "lights_activated": true, "pattern": "elephant-deterrent" },
+      "status": "NEW",
+      "notes": "Large bull elephant approaching tea garden fence."
+    },
+    {
+      "incident_id": "inc_20260303_002",
+      "device_id": "agrishield-device-assam-002",
+      "timestamp": 1772550000000,
+      "species": "boar",
+      "confidence": 0.88,
+      "threat_level": "MEDIUM",
+      "location": { "lat": 26.6600, "lng": 92.8200, "name": "Brahmaputra Buffer" },
+      "image_url": "https://images.unsplash.com/photo-1590420485404-f86d22b8abf8?auto=format&fit=crop&w=800&q=80",
+      "deterrence_action": { "sound_played": true, "lights_activated": false, "pattern": "boar-deterrent" },
+      "status": "NEW",
+      "notes": "Group of wild boars detected near paddy fields."
+    },
+    {
+      "incident_id": "inc_20260303_003",
+      "device_id": "agrishield-device-assam-001",
+      "timestamp": 1772542800000,
+      "species": "elephant",
+      "confidence": 0.96,
+      "threat_level": "HIGH",
+      "location": { "lat": 26.6450, "lng": 92.8050, "name": "Western Range" },
+      "image_url": "https://images.unsplash.com/photo-1581012771300-224937651c42?auto=format&fit=crop&w=800&q=80",
+      "deterrence_action": { "sound_played": true, "lights_activated": true, "pattern": "elephant-deterrent" },
+      "status": "RESOLVED",
+      "notes": "Elephant herd moved back towards the park after deterrence."
+    },
+    {
+      "incident_id": "inc_20260303_004",
+      "device_id": "agrishield-device-assam-003",
+      "timestamp": 1772535600000,
+      "species": "leopard",
+      "confidence": 0.82,
+      "threat_level": "MEDIUM",
+      "location": { "lat": 26.6550, "lng": 92.8300, "name": "Tea Estate Entrance" },
+      "image_url": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=800&q=80",
+      "deterrence_action": { "sound_played": false, "lights_activated": false, "pattern": "none" },
+      "status": "REVIEWED",
+      "notes": "Leopard spotted near worker quarters. Monitoring closely."
+    }
+  ],
+  "total": 4,
+  "limit": 100,
+  "offset": 0
+}

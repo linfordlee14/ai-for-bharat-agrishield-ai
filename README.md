@@ -252,3 +252,108 @@ This project is licensed under the MIT License—see the [LICENSE](LICENSE) file
 <p align="center">
   <strong>Protecting crops. Preserving wildlife. Empowering farmers.</strong>
 </p>
+
+
+---
+
+## 🖥️ Ranger Dashboard (Frontend) – Quick Start
+
+This folder contains a demo‑ready React dashboard for rangers/admins to visualize wildlife incidents and device status.
+
+### Demo Mode (no backend)
+
+Prerequisites:
+- Node.js 18+
+- npm (or pnpm/yarn)
+
+Steps:
+1. Install deps:
+   ```bash
+   npm install
+   ```
+2. Ensure demo mode is enabled (default in `.env`):
+   ```env
+   VITE_DEMO_MODE=true
+   ```
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open the app at the URL shown (usually http://localhost:5173) and login with any credentials.
+
+Demo behavior:
+- Loads seeded JSON from `/public/demo-data/incidents.json` and `/public/demo-data/devices.json`
+- Simulated latency: 200–500ms
+- Mock auth: any email/password works
+- "DEMO MODE" badge is shown in the header
+
+### Production build
+```bash
+npm run build
+npm run preview
+```
+
+### Real API integration (later)
+The API facade lives in `src/services/api.ts` with three main functions:
+- `fetchIncidents(params)`
+- `fetchDevices()`
+- `login(email, password)`
+
+When `VITE_DEMO_MODE=false`, these functions call placeholder endpoints under `/api/v1/...` as defined in `FRONTEND_REQUIREMENTS.md`.
+
+Options to wire a real backend quickly:
+- Configure your reverse proxy (or Vite dev proxy) to forward `/api` to your backend base URL; or
+- Update `src/services/api.ts` to use your base URL (e.g., via an env like `VITE_API_BASE_URL`).
+
+Example Vite proxy (vite.config.ts):
+```ts
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      '/api': 'https://api.agrishield.example.com',
+    },
+  },
+});
+```
+
+Data contracts and endpoints follow `FRONTEND_REQUIREMENTS.md` Section 6–7.
+
+### Project structure (frontend)
+```
+src/
+  assets/
+  components/
+    AlertsPanel.tsx
+    DeviceStatusPanel.tsx
+    IncidentDetail.tsx
+    FilterPanel.tsx
+    MapPanel.tsx
+  context/
+    AuthContext.tsx
+    DataContext.tsx
+  layouts/
+    DashboardLayout.tsx
+    Header.tsx
+    Sidebar.tsx
+  models/
+    types.ts
+  pages/
+    DashboardPage.tsx
+    DevicesPage.tsx
+    IncidentsPage.tsx
+    LoginPage.tsx
+    SettingsPage.tsx
+  services/
+    api.ts
+  styles/
+    index.css
+```
+
+### Notes
+- Map uses Leaflet + a simple heatmap toggle (leaflet.heat)
+- Alerts table supports pagination (20/page) and basic sorting
+- Filters (species, time, threat) affect map and table
+- Device panel shows online/offline/degraded status with last heartbeat
+- Incident detail opens in a modal
+- Responsive layout targets desktop and tablet

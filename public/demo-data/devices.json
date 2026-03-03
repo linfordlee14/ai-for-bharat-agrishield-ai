@@ -1,0 +1,64 @@
+{
+  "devices": [
+    {
+      "device_id": "agrishield-device-001",
+      "name": "Kaziranga North Gate",
+      "location": { "lat": 26.6528, "lng": 92.8120 },
+      "status": "ONLINE",
+      "last_heartbeat": 1772555200000,
+      "battery_level": 87,
+      "signal_strength": -65,
+      "firmware_version": "1.2.0",
+      "total_incidents_24h": 12,
+      "config": { "confidence_threshold": 0.7, "deterrence_enabled": true }
+    },
+    {
+      "device_id": "agrishield-device-002",
+      "name": "Tea Estate West Perimeter",
+      "location": { "lat": 26.6600, "lng": 92.8200 },
+      "status": "ONLINE",
+      "last_heartbeat": 1772555300000,
+      "battery_level": 42,
+      "signal_strength": -72,
+      "firmware_version": "1.2.0",
+      "total_incidents_24h": 5,
+      "config": { "confidence_threshold": 0.65, "deterrence_enabled": true }
+    },
+    {
+      "device_id": "agrishield-device-003",
+      "name": "Waterhole Monitor North",
+      "location": { "lat": 26.6450, "lng": 92.8050 },
+      "status": "DEGRADED",
+      "last_heartbeat": 1772554000000,
+      "battery_level": 12,
+      "signal_strength": -88,
+      "firmware_version": "1.1.8",
+      "total_incidents_24h": 18,
+      "config": { "confidence_threshold": 0.7, "deterrence_enabled": false }
+    },
+    {
+      "device_id": "agrishield-device-004",
+      "name": "Paddy Fields South East",
+      "location": { "lat": 26.6550, "lng": 92.8300 },
+      "status": "OFFLINE",
+      "last_heartbeat": 1772540000000,
+      "battery_level": 0,
+      "signal_strength": -100,
+      "firmware_version": "1.2.0",
+      "total_incidents_24h": 0,
+      "config": { "confidence_threshold": 0.7, "deterrence_enabled": true }
+    },
+    {
+      "device_id": "agrishield-device-005",
+      "name": "Village Buffer Zone",
+      "location": { "lat": 26.6700, "lng": 92.8100 },
+      "status": "ONLINE",
+      "last_heartbeat": 1772555000000,
+      "battery_level": 95,
+      "signal_strength": -60,
+      "firmware_version": "1.2.0",
+      "total_incidents_24h": 3,
+      "config": { "confidence_threshold": 0.75, "deterrence_enabled": true }
+    }
+  ]
+}
