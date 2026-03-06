@@ -1,0 +1,53 @@
+# Core dependencies
+python-dotenv==1.0.0
+pyyaml==6.0.1
+pydantic==2.5.0
+
+# Machine Learning
+tensorflow-lite==2.14.0
+numpy==1.24.3
+opencv-python==4.8.1.78
+
+# Audio processing
+pyaudio==0.2.14
+librosa==0.10.1
+soundfile==0.12.1
+
+# Database
+sqlcipher3==0.5.2
+
+# MQTT and AWS IoT
+paho-mqtt==1.6.1
+awsiotsdk==1.19.0
+
+# Networking
+requests==2.31.0
+urllib3==2.1.0
+
+# GPIO and Hardware (Raspberry Pi)
+RPi.GPIO==0.7.1
+picamera2==0.3.16
+gpiozero==2.0.1
+
+# GSM/LoRa communication
+pyserial==3.5
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+hypothesis==6.92.1
+pytest-mock==3.12.0
+
+# Code quality
+black==23.12.0
+flake8==6.1.0
+mypy==1.7.1
+pylint==3.0.3
+
+# Logging
+python-json-logger==2.0.7
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3

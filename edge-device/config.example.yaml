@@ -1,0 +1,93 @@
+# AgriShield AI Edge Device Configuration
+# Copy this file to config.yaml and update with your settings
+
+device:
+  device_id: "agrishield-device-001"
+  location:
+    name: "Farm Block A"
+    latitude: -1.2921
+    longitude: 36.8219
+
+detection:
+  confidence_threshold: 0.7
+  frame_rate: 15
+  resolution: [640, 480]
+  input_size: [224, 224]
+  model_path: "models/vision-model.tflite"
+  audio_model_path: "models/audio-model.tflite"
+  audio_enabled: true
+  audio_sample_rate: 16000
+  audio_window_seconds: 1
+
+monitoring:
+  start_time: "06:00"
+  end_time: "20:00"
+  timezone: "Africa/Nairobi"
+
+deterrence:
+  enabled: true
+  volume_db: 100
+  duration_seconds: 30
+  cooldown_seconds: 60
+  light_gpio_pin: 17
+  sound_patterns:
+    Elephant: "sounds/elephant-deterrent.wav"
+    Boar: "sounds/boar-deterrent.wav"
+    Leopard: "sounds/leopard-deterrent.wav"
+    default: "sounds/general-alarm.wav"
+
+connectivity:
+  wifi:
+    enabled: true
+    ssid: "YourWiFiSSID"
+    password: "YourPassword"
+  gsm:
+    enabled: true
+    apn: "internet"
+    port: "/dev/ttyUSB0"
+    baudrate: 115200
+  lora:
+    enabled: false
+    frequency: 868000000
+    spreading_factor: 7
+
+aws:
+  iot_endpoint: "your-endpoint.iot.us-east-1.amazonaws.com"
+  region: "us-east-1"
+  certificates:
+    ca: "certs/root-ca.pem"
+    cert: "certs/device-certificate.pem.crt"
+    key: "certs/device-private.pem.key"
+
+cache:
+  max_incidents: 1000
+  db_path: "cache/incidents.db"
+  encryption_key: "your-encryption-key-here"  # Change this!
+
+sync:
+  interval_seconds: 900  # 15 minutes
+  batch_size: 50
+  retry_attempts: 3
+  retry_backoff_base: 2
+
+telemetry:
+  interval_seconds: 300  # 5 minutes
+  include_system_info: true
+
+battery:
+  enabled: true
+  monitoring_interval_seconds: 60
+  saving_threshold_percent: 30
+  critical_threshold_percent: 15
+  normal_threshold_percent: 40
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file_path: "logs/agrishield.log"
+  max_file_size_mb: 100
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+diagnostics:
+  run_on_boot: true
+  run_on_error: true
