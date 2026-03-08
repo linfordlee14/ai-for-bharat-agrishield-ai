@@ -6,15 +6,13 @@ import boto3
 from datetime import datetime, timedelta
 from typing import Dict, Any, Optional
 
-# AWS clients
-dynamodb = boto3.resource('dynamodb')
+from db import get_db, engine
+from models import Device, Incident, Telemetry, MovementEvent
+
+# AWS clients (S3, SNS, IoT only — database is on external VPS)
 s3 = boto3.client('s3')
 sns = boto3.client('sns')
 iot_data = boto3.client('iot-data')
-
-def get_table(table_name: str):
-    """Get DynamoDB table resource"""
-    return dynamodb.Table(table_name)
 
 def generate_presigned_url(bucket: str, key: str, expiration: int = 3600) -> str:
     """
@@ -125,18 +123,17 @@ def validate_incident_payload(payload: Dict[str, Any]) -> tuple[bool, Optional[s
     
     return True, None
 
-def calculate_ttl(days: int) -> int:
+def parse_query_params(event: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Calculate TTL timestamp for DynamoDB
+    Parse query string parameters from API Gateway event
     
     Args:
-        days: Number of days from now
+        event: API Gateway event
     
     Returns:
-        Unix timestamp
+        Dictionary of query parameters
     """
-    expiration = datetime.now() + timedelta(days=days)
-    return int(expiration.timestamp())
+    return event.get('queryStringParameters') or {}
 
 def extract_user_role(event: Dict[str, Any]) -> Optional[str]:
     """
